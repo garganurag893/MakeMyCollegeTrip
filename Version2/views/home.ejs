@@ -1,0 +1,48 @@
+<% include partials/header.ejs %>
+<div class="bgimg-1">
+  <div class="caption">
+  <span class="border">Welcome to Make My College Trip</span>
+  </div>
+</div>
+<div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+  <h2 style="text-align:center;">About Us</h3>
+  <p style="text-align:center;">This website is made for Chitkara Students Only</p>
+  <p style="text-align:center;">We used to organize an unoffical trip in a time span of 3-4 months</p>
+</div>
+<div class="bgimg-3">
+</div>
+<% locs.forEach(function(loc){ %>
+    <div class="bgimg-2" style="background-image: url('<%= loc.img %>');">
+       <div class="container">
+         <header class="jumbotron">
+           <h1 style="color:black;text-align:center;text-shadow: 2px 2px ;"><%= loc.name %></h1>
+           <h3 style="color:black;text-shadow: 2px 2px ;"> Package price : Rs.<%= loc.cost %></h3>
+           <h3 style="color:black;text-shadow: 2px 2px ;"> Currently enrolled Students : <%= loc.count %></h3>
+          <h3 style="color:black;text-shadow: 2px 2px ;"> Date Of Departure : <%= loc.dept %></h3>
+         </header>
+       </div>
+       <div style="color:black;text-align:center;padding:50px 80px;text-align:justify;">
+          <h2><%= loc.desc1 %></h2>
+          <h2><%= loc.desc2 %></h2>
+          <h2><%= loc.desc3 %></h2>
+          <h2><%= loc.desc4 %></h2>
+          <h2><%= loc.desc5 %></h2>
+          <h2><%= loc.desc6 %></h2>
+      </div>
+      
+    </div>
+<% }) %>
+<div class="bgimg-2">
+  <div class="caption">
+  <a style="margin: 0 auto; display: inline-block; width: 30%; border-radius: 10px; border: none; padding: 10px 20px; color: aliceblue; background-color: #d6a844;" href="/createnew"><font size="6">Book My Trip</font></a>
+  </div>
+</div>
+<div class="bgimg-1">
+  <div class="caption">
+  <a style="margin: 0 auto; display: inline-block; width: 30%; border-radius: 10px; border: none; padding: 10px 20px; color: aliceblue; background-color: #d6a844;" href="/signin"><font size="6">Admin Sign In</font></a>
+  </div>
+ <h2 Style="position: absolute;
+  bottom: 0;
+  left: 0;">Trademark @AnuragGarg</h2>
+</div>
+<% include partials/footer.ejs %>

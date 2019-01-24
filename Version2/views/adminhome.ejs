@@ -1,0 +1,34 @@
+<% include partials/header.ejs %>
+<div class="bgimg-1">
+  <div class="caption">
+  <span class="border">Welcome Mr.Anurag</span>
+  </div>
+</div>
+<div class="bgimg-2">
+  <div class="caption" style="top:20%">
+  <span class="border">Remove Below Location</span>
+  </div>
+  <div class="caption">
+  <div class="container" style="text-align:center;">
+    <form action="/remove" method="POST">
+      <h2>Trip to :</h2>
+     <select name="trip"required>
+   <%  locs.forEach(function(loc){ %>
+     <option value="<%=loc.name%>"><%= loc.name %></option>
+     <% }) %>
+    </select>
+     <br><br>
+     <input type="submit" value="Submit">
+   </form> 
+   </div>
+   </div>
+</div>
+<div class="bgimg-1">
+  <div class="caption">
+  <a style="margin: 0 auto; display: inline-block; width: 30%; border-radius: 10px; border: none; padding: 10px 20px; color: aliceblue; background-color: #d6a844;" href="/newloc"><font size="6">Create New Location</font></a>
+  </div>
+ <h2 Style="position: absolute;
+  bottom: 0;
+  left: 0;">Trademark @AnuragGarg</h2>
+</div>
+<% include partials/footer.ejs %>
