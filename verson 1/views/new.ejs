@@ -1,0 +1,37 @@
+<% include partials/header.ejs %>
+<div class="bgimg-1">
+  <div class="caption">
+  <span class="border">Book Your Trip</span>
+  </div>
+</div>
+<div class="bgimg-2" >
+    <div class="container" style="text-align:center;">
+    <form action="/createnew" method="POST">
+     <h2>First name:</h2>
+     <input type="text" name="firstname" placeholder="First Name" required>
+     <br>
+     <h2>Last name:</h2>
+     <input type="text" name="lastname" placeholder="Last Name" required>
+     <br>
+     <h2>Contact No:</h2>
+     <input type="text" name="contact" placeholder="Contact No" required>
+     <br>
+     <h2>Batch:</h2>
+     <input type="text" name="batch" placeholder="Batch" required>
+     <br>
+      <h2>Trip to :</h2>
+     <select name="trip" required>
+   <%  locs.forEach(function(loc){ %>
+     <option value="<%=loc.name%>"><%= loc.name %></option>
+     <% }) %>
+    </select>
+     <br><br>
+     <input type="submit" value="Submit">
+   </form> 
+   
+</div>
+<h2 Style="position: absolute;
+  bottom: 0;
+  left: 0;">Trademark @AnuragGarg</h2>
+</div>
+<% include partials/footer.ejs %>
